@@ -1,0 +1,12 @@
+html,
+body {
+  overflow-x: hidden;
+}
+@media (max-width: 767px) {
+  p.text-copyright br {
+    display: block !important;
+  }
+  .footer-widgets {
+    min-width: 100%;
+  }
+}

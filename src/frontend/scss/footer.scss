@@ -1,0 +1,40 @@
+footer#site-footer {
+  min-height: 85px;
+  background-color: $color-base;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $white;
+    font-size: calc($font-size-base + 2px);
+    margin-bottom: 0;
+    br {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    min-height: 54px;
+  }
+}
+ul#menu-footer {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    a {
+      color: $color-base;
+      padding-bottom: 10px;
+    }
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  p.text-copyright {
+    font-size: 0.8rem !important;
+    padding: 5px;
+    text-align: center;
+    br {
+      display: block;
+    }
+  }
+}

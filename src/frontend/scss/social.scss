@@ -1,0 +1,112 @@
+.social-network-widget {
+  position: fixed;
+  z-index: 9999;
+  bottom: 100px;
+  right: -120px;
+  transition: 0.5s;
+  @media (max-width: 767px) {
+    bottom: 60px;
+  }
+  #button-trigger {
+    position: relative;
+    &.active {
+      background: #158ee6;
+
+      &:hover {
+        background: #158ee6;
+      }
+    }
+    &.rotateButton {
+      animation-name: rotateButton;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-delay: 0;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
+    }
+  }
+}
+.viber {
+  animation-name: viber;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-play-state: running;
+  &.active {
+    animation-play-state: paused;
+  }
+}
+.social-element {
+  background: $light-blue;
+  color: $white;
+
+  font-size: 28px;
+  appearance: none;
+  border: none;
+  border-radius: 10%;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  &.circle {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    @media (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &.rounded {
+    border-radius: 10%;
+    height: 46px;
+    width: 46px;
+  }
+  &:hover {
+    color: white;
+    background: $color-base;
+  }
+}
+.social-list {
+  display: flex;
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.social-network-wrapper-widget {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  &.opened {
+    height: 353px;
+    @media (max-width: 767px) {
+      height: 290px;
+    }
+  }
+}
+@keyframes rotateButton {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(370deg);
+  }
+}
+@keyframes viber {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}

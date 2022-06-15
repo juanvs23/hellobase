@@ -1,0 +1,29 @@
+$mobile: 767px;
+$tablet: 768px;
+$desktop: 1025px;
+$large-desktop: 1440px;
+$font-size-base: 18px;
+$font-size-base-large-desktop: 18px;
+$color-base: #00205b;
+$white: #ffffff;
+$purple-1: #c31cb5;
+$purple-2: #821d97;
+$font-family: "Raleway", sans-serif;
+$weight-base: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-black: 900;
+$light-blue: #03dddd;
+//font-family: 'Raleway', sans-serif;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    color: $color-base;
+    font-size: $font-size-base;
+    background-color: $white;
+    font-family: $font-family;
+  }
+}

@@ -1,0 +1,114 @@
+.thinkus-content{
+    max-width: 1080px;
+    width: calc(100% - 30px);
+    margin: 80px auto;
+    
+
+    .controller-wrapper {
+        display: grid;
+        justify-content: space-between;
+        gap: 10%;
+        margin-bottom: 120px;
+        @media (max-width:991px) {
+            grid-template-columns: 1fr;
+        }
+        @media (min-width:992px) {
+            grid-template-columns: 40% 40%;
+        }
+        
+       
+    }
+}
+.controller-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    @media(max-width:991px){
+        font-size: 2rem;
+    }
+}
+.controller-button{
+    display:flex;
+    justify-content:space-between;
+    
+    button{
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        font-size: 3rem;
+        padding:10px;
+        transition: 0.3s; 
+        color: $color-base;
+        &:hover,&:focus,&:focus-visible{
+            outline: none;
+            background-color: transparent;
+            opacity: 0.7;
+            border:none;
+            color: $color-base;
+        }
+    }
+}
+.swiper-cube .swiper-cube-shadow:before{
+    display: none !important;
+}
+div#swipper-archive {
+   
+  
+    margin: 40px auto;
+    overflow: hidden;
+}
+.post-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+    gap: 8% 5%;
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+}
+.post-wrapper__container {
+    max-width: 478px;
+    width: 96%;
+    margin: auto;
+    background: white;
+    box-shadow: 0 3px 6px 0 #00000029;
+    .post-wrapper__content__text{
+        padding: 0px 20px 20px;
+        display: block;
+        color: $color-base;
+    }
+    h2.post-wrapper__content__text__title {
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $color-base;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        @media (max-width:767px) {
+            font-size: 1.5rem;
+        }
+    }
+    .post-wrapper__content__text__content{
+        font-size:1rem;
+        color: $color-base;
+    }
+}
+.thinkus-categories-content {
+    position: relative;
+    display: flex;
+    gap: 7px;
+    top: -22px;
+    padding: 0 5px;
+    flex-wrap: wrap;
+    .thinkus-category {
+        color: #00205B;
+        background-color: #C31CB5;
+        padding: 4px 20px;
+        border-radius: 30px;
+        line-height: 1.2;
+        @media (max-width:767px) {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+

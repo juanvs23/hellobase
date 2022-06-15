@@ -1,11 +1,11 @@
 <?php
 
-function thinkus_settings_main_page(){
-    $config ='thinkus_footer_config';
+function gs_stone_settings_main_page(){
+    $config ='gs_stone_footer_config';
     $security = wp_create_nonce($config);
     $action = $config;
     $social_network = [
-        "facebook_url"=>"https://www.facebook.com/thinkus",
+        "facebook_url"=>"https://www.facebook.com/gs_stone",
         "twitter_url"=>"",
         "instagram_url"=>"https://www.instagram.com/think_us.22/?igshid=YmMyMTA2M2Y%3D",
         "linkedin_url"=>"https://www.linkedin.com/in/think-us-b06ab823b/",
@@ -27,13 +27,13 @@ function thinkus_settings_main_page(){
     $youtube_url = $footer_config_info["social_network"]['youtube_url'] != ""?$footer_config_info["social_network"]['youtube_url']:$social_network['youtube_url'];
     $whatsapp_url = $footer_config_info["social_network"]['whatsapp_url'] != ""?$footer_config_info["social_network"]['whatsapp_url']:$social_network['whatsapp_url'];
     ?>
-    <div class="thinkus__admin__container row pb-6 pt-6">
-        <div class="thinkus__admin__container__header col-12">
-            <h1 class="text-center">Configuraciones Thinkus</h1>
+    <div class="gs_stone__admin__container row pb-6 pt-6">
+        <div class="gs_stone__admin__container__header col-12">
+            <h1 class="text-center">Configuraciones gs_stone</h1>
         </div>
-        <div class="thinkus__admin__container__body">
-            <div class="thinkus__admin__container__body__content">
-                <div class="thinkus__admin__container__body__content__item">
+        <div class="gs_stone__admin__container__body">
+            <div class="gs_stone__admin__container__body__content">
+                <div class="gs_stone__admin__container__body__content__item">
                     <h2 class="text-center display-2">Sección del footer</h2>
                     <p class="text-center">
                         Crea tu footer desde elementor PRO y copia el id del template ([elementor-template id="<a href="<?php admin_url( 'edit.php?post_type=elementor_library&tabs_group=library' )?>"><u>71</u></a>"]) en el campo de texto de abajo.
@@ -84,7 +84,7 @@ function thinkus_settings_main_page(){
                                             <input type="text" class="form-control " 
                                             id="facebook_url" 
                                             name="facebook_url" 
-                                            placeholder=" ejemplo: https://www.facebook.com/thinkus" 
+                                            placeholder=" ejemplo: https://www.facebook.com/gs_stone" 
                                             value="<?php echo $facebook_url;?>">
                                         </label>
                                     </div>
@@ -95,7 +95,7 @@ function thinkus_settings_main_page(){
                                             <input type="text" class="form-control " 
                                             id="instagram_url" 
                                             name="instagram_url" 
-                                            placeholder=" ejemplo: https://www.instagram.com/thinkus" 
+                                            placeholder=" ejemplo: https://www.instagram.com/gs_stone" 
                                             value="<?php echo $instagram_url;?>">
                                         </label>
                                     </div>
@@ -117,7 +117,7 @@ function thinkus_settings_main_page(){
                                             <input type="text" class="form-control " 
                                             id="twitter_url" 
                                             name="twitter_url" 
-                                            placeholder=" ejemplo: https://www.twitter.com/thinkus" 
+                                            placeholder=" ejemplo: https://www.twitter.com/gs_stone" 
                                             value="<?php echo $twitter_url;?>">
                                         </label>
                                     </div>
@@ -128,7 +128,7 @@ function thinkus_settings_main_page(){
                                             <input type="text" class="form-control " 
                                             id="youtube_url" 
                                             name="youtube_url" 
-                                            placeholder=" ejemplo: https://www.youtube.com/c/thinkus" 
+                                            placeholder=" ejemplo: https://www.youtube.com/c/gs_stone" 
                                             value="<?php echo $youtube_url; ?>">
                                         </label>
                                     </div>
@@ -157,10 +157,10 @@ function thinkus_settings_main_page(){
     
     <?php
 }
-if (!function_exists('thinkus_footer_config')) {
-    function thinkus_footer_config(){
-        if(isset($_POST['security']) && wp_verify_nonce($_POST['security'], 'thinkus_footer_config')){
-            if(isset($_POST['action']) && $_POST['action']=='thinkus_footer_config'){
+if (!function_exists('gs_stone_footer_config')) {
+    function gs_stone_footer_config(){
+        if(isset($_POST['security']) && wp_verify_nonce($_POST['security'], 'gs_stone_footer_config')){
+            if(isset($_POST['action']) && $_POST['action']=='gs_stone_footer_config'){
                 $footer_data = serialize(array(
                     'footer_template_id'=> $_POST['footer_template_id'],
                     'displayfooter'=> $_POST['displayfooter'],
@@ -180,6 +180,6 @@ if (!function_exists('thinkus_footer_config')) {
         wp_send_json_success($_POST,200);
         wp_die();
     }
-    add_action('wp_ajax_thinkus_footer_config', 'thinkus_footer_config');
-    add_action('wp_ajax_nopriv_thinkus_footer_config', 'thinkus_footer_config');
+    add_action('wp_ajax_gs_stone_footer_config', 'gs_stone_footer_config');
+    add_action('wp_ajax_nopriv_gs_stone_footer_config', 'gs_stone_footer_config');
 }

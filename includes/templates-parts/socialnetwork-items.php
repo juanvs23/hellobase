@@ -72,7 +72,7 @@ if($align!='flex-start'){
     echo 'width:'.$size.'px;';
     echo 'height:'.$size.'px;';
 }?>"
-			title="<?php printf(__('ir a %s', 'Thinkus-child'), $title); ?>" >
+			title="<?php printf(__('ir a %s', 'gs_stone-child'), $title); ?>" >
                 <i class="fa-brands <?php echo  $social_network_item['icon']; ?>"></i>
 			</a>
             

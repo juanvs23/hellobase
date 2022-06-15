@@ -21,21 +21,21 @@ while ( have_posts() ) :
 <div class="thinus-singlepost-wrapper">
 
 
-<header class="thinkus-single">
+<header class="gs_stone-single">
 
-		<div class="thinkus-single__header__image">
-			<?php echo get_the_post_thumbnail(get_the_ID(), array( 899, 607), array('class' => 'thinkus-post-image')); ?>
+		<div class="gs_stone-single__header__image">
+			<?php echo get_the_post_thumbnail(get_the_ID(), array( 899, 607), array('class' => 'gs_stone-post-image')); ?>
 			
 			<?php  
 			set_query_var('post_id', get_the_ID());
 			echo get_template_part( 'includes/templates-parts/post/get_category','display' ); 
 			?>
 		</div>
-		<div class="thinkus-single__header__title">
-			<h1 class="thinkus-single__header__title__text"><?php echo get_the_title(); ?></h1>
+		<div class="gs_stone-single__header__title">
+			<h1 class="gs_stone-single__header__title__text"><?php echo get_the_title(); ?></h1>
 		</div>
 </header>
-<main id="thinkus-content" <?php post_class( 'site-main' ); ?> role="main">
+<main id="gs_stone-content" <?php post_class( 'site-main' ); ?> role="main">
 
 	<div class="page-content">
 		<?php the_content(); ?>
@@ -48,7 +48,7 @@ while ( have_posts() ) :
 endwhile;?>
 
 </main>
-<aside class="thinkus-wrapper ultimas-noticias">
+<aside class="gs_stone-wrapper ultimas-noticias">
 	<div class="ultimas-noticias">
 		<h2 class="ultimas-noticias__title">
 			<?php echo $single_noticias_title; ?>
@@ -78,10 +78,10 @@ endwhile;?>
 	</div>
 	</div>
 
-<button class="thinkus-button-prev">
+<button class="gs_stone-button-prev">
         <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="thinkus-button-next">
+        <button class="gs_stone-button-next">
         <i class="fa-solid fa-arrow-right"></i>
         </button>
 

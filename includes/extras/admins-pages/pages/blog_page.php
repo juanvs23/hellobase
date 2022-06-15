@@ -1,6 +1,6 @@
 <?php
-function thinkus_settings_blog_page() {
-    $config = 'thinkus_blog_page_config';
+function gs_stone_settings_blog_page() {
+    $config = 'gs_stone_blog_page_config';
     $security = wp_create_nonce($config);
     $action = $config;
     $blog_config_info = unserialize(get_option($config))?unserialize(get_option($config)):['is_white_menu' => false, 'is_menu_shadow' => false, 'blog_text' => '','elementor_id'=>''];
@@ -9,11 +9,11 @@ function thinkus_settings_blog_page() {
     $blog_text = $blog_config_info['blog_text']!=''?$blog_config_info['blog_text']:'';
     $elementor_id = $blog_config_info['elementor_id']!=''?$blog_config_info['elementor_id']:'';
     ?>
-    <div class="thinkus__admin__container row pb-6 pt-6">
-        <div class="thinkus__admin__container__header col-12">
+    <div class="gs_stone__admin__container row pb-6 pt-6">
+        <div class="gs_stone__admin__container__header col-12">
             <h1 class="text-center">Configuración blog</h1>
         </div>
-        <div class="thinkus__admin__container__body">
+        <div class="gs_stone__admin__container__body">
             <form action="" id="<?php echo  $config;?>" method="post">
             <input type="hidden" name="security" id="security"  value="<?php echo  $security; ?>">
                         <input type="hidden" name="action" id="action" value="<?php echo   $action; ?>">
@@ -52,10 +52,10 @@ function thinkus_settings_blog_page() {
     <?php
 }
 
-if (!function_exists('thinkus_blog_page_config')) {
-    function thinkus_blog_page_config()
+if (!function_exists('gs_stone_blog_page_config')) {
+    function gs_stone_blog_page_config()
     {
-    $config = 'thinkus_blog_page_config';
+    $config = 'gs_stone_blog_page_config';
 
         if(isset($_POST['security']) && wp_verify_nonce($_POST['security'],  $config)){
             if(isset($_POST['action']) && $_POST['action']== $config){
@@ -77,6 +77,6 @@ if (!function_exists('thinkus_blog_page_config')) {
             }
         }
     }
-    add_action('wp_ajax_thinkus_blog_page_config', 'thinkus_blog_page_config');
-    add_action('wp_ajax_thinkus_blog_page_config', 'thinkus_blog_page_config');
+    add_action('wp_ajax_gs_stone_blog_page_config', 'gs_stone_blog_page_config');
+    add_action('wp_ajax_gs_stone_blog_page_config', 'gs_stone_blog_page_config');
 }

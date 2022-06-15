@@ -1,5 +1,5 @@
 const footerForm = document.querySelector("#footer-form");
-const blogForm = document.getElementById("thinkus_blog_page_config");
+const blogForm = document.getElementById("gs_stone_blog_page_config");
 
 const formLoading = (idForm, action) => {
   const loading = document.createElement("div");
@@ -44,7 +44,7 @@ if (footerForm) {
     const youtube_url = footerForm.querySelector("#youtube_url");
     const whatsapp_url = footerForm.querySelector("#whatsapp_url");
     /*
-         "facebook_url"=>"https://www.facebook.com/thinkus",
+         "facebook_url"=>"https://www.facebook.com/gs_stone",
             "twitter_url"=>"",
             "instagram_url"=>"https://www.instagram.com/think_us.22/?igshid=YmMyMTA2M2Y%3D",
             "linkedin_url"=>"https://www.linkedin.com/in/think-us-b06ab823b/",
@@ -55,7 +55,7 @@ if (footerForm) {
     const action = footerForm.querySelector("#action").value;
 
     if (getFooterId.value != "") {
-      const url = thinkus_admin_ajax.admin_ajax;
+      const url = gs_stone_admin_ajax.admin_ajax;
       formLoading("#footer-form", "show");
       const formData = new FormData();
       formData.append("action", action);
@@ -95,8 +95,8 @@ if (blogForm) {
     const elementor_id = blogForm.querySelector("#elementor_id");
     console.log(is_menu_shadow.checked, is_white_menu.checked, text_blog.value);
     if (text_blog.value != "") {
-      const url = thinkus_admin_ajax.admin_ajax;
-      formLoading("#thinkus_blog_page_config", "show");
+      const url = gs_stone_admin_ajax.admin_ajax;
+      formLoading("#gs_stone_blog_page_config", "show");
       const formData = new FormData();
       formData.append("action", action);
       formData.append("security", security);
@@ -113,9 +113,9 @@ if (blogForm) {
           return res.text();
         })
         .then((res) => {
-          formLoading("#thinkus_blog_page_config", "save");
+          formLoading("#gs_stone_blog_page_config", "save");
           setTimeout(() => {
-            formLoading("#thinkus_blog_page_config", "delete");
+            formLoading("#gs_stone_blog_page_config", "delete");
           }, 3000);
         });
     }

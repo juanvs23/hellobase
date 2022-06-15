@@ -15,7 +15,7 @@ $footer_config_info = unserialize(get_option('footer_config'));
  * 		   [displayfooter] => true 
  * 		   [social_network] => 
  * 				Array ( 
- * 						[facebook_url] => https://www.facebook.com/thinkus 
+ * 						[facebook_url] => https://www.facebook.com/gs_stone 
  * 						[twitter_url] => 
  * 						[instagram_url] => 
  * 						[linkedin_url] => https://www.linkedin.com/in/think-us-b06ab823b/ 
@@ -39,10 +39,10 @@ if($page_footer){
 }
 echo $hide_copyright_by_page;
 if($show_copyright_footer && !$hide_copyright_by_page): ?>
-<footer id="site-footer" class="thinkus-footer" role="contentinfo">
+<footer id="site-footer" class="gs_stone-footer" role="contentinfo">
 	
 	<p class="text-copyright">
-		<?php printf(__('© Copyright Conocimiento Corporativo %d.<br> All rights reserved', 'Thinkus-child'),THINKUS_THEME_DATE['year']); ?>
+		<?php printf(__('© Copyright Conocimiento Corporativo %d.<br> All rights reserved', 'gs_stone-child'),gs_stone_THEME_DATE['year']); ?>
 	</p>
 </footer>
 <div class="social-network-widget">
@@ -62,7 +62,7 @@ if($show_copyright_footer && !$hide_copyright_by_page): ?>
 		<buttton 
 			id="button-trigger" 
 			class="circle social-element" 
-			title="<?php printf(__('Abrir redes sociales', 'Thinkus-child')); ?>" >
+			title="<?php printf(__('Abrir redes sociales', 'gs_stone-child')); ?>" >
 				<i class="fa-solid fa-comments"></i>
 			</buttton>
 	</div>

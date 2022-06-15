@@ -1,6 +1,6 @@
 <?php
 
-function thinkus_social_network_shortcode($atts){
+function gs_stone_social_network_shortcode($atts){
     $atts = shortcode_atts(
         array(
             'display' => 'row',
@@ -21,4 +21,4 @@ function thinkus_social_network_shortcode($atts){
     echo '</div>';
     return ob_get_clean();
 }
-add_shortcode( 'thinkus_show_social_network', 'thinkus_social_network_shortcode' );
+add_shortcode( 'gs_stone_show_social_network', 'gs_stone_social_network_shortcode' );

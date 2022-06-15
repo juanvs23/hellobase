@@ -2,7 +2,7 @@
 /* 
 Template Name: Archives
 */
-$blog_page_config= 'thinkus_blog_page_config';
+$blog_page_config= 'gs_stone_blog_page_config';
 $header = unserialize(get_option($blog_page_config));
 /*
  [is_white_menu] => true [is_menu_shadow] => true 
@@ -12,26 +12,26 @@ get_header();
 
 $blog_title = term_description()?term_description(): $header['blog_text'] ;
 
-echo '<div class="thinkus-header">';
+echo '<div class="gs_stone-header">';
 echo do_shortcode( '[elementor-template id="'.$header['elementor_id'].'"]' );
 echo '</div>';
-echo '<div class="thinkus-content">';
+echo '<div class="gs_stone-content">';
 echo '<div class="controller-wrapper">';
 echo '<div class="controller-text">';
 echo'<h2>'.$blog_title.'</h2>';
 echo '</div>';
 echo '<div class="controller-button">';
-echo ' <button class="thinkus-button-prev">
+echo ' <button class="gs_stone-button-prev">
         <i class="fa-solid fa-arrow-left"></i>
         </button>
-        <button class="thinkus-button-next">
+        <button class="gs_stone-button-next">
         <i class="fa-solid fa-arrow-right"></i>
         </button>';
 echo '</div>';
 
 
 echo '</div>';
-echo '<div id="swipper-archive" class="thinkus-content__container">';
+echo '<div id="swipper-archive" class="gs_stone-content__container">';
 echo '<div class="swiper-wrapper">';
 $count = 0;
 while ( have_posts() ) {

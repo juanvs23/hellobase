@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       navigation: {
-        nextEl: ".thinkus-button-next",
-        prevEl: ".thinkus-button-prev",
+        nextEl: ".gs_stone-button-next",
+        prevEl: ".gs_stone-button-prev",
       },
     });
   }
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
         onlyInViewport: false,
       },
       navigation: {
-        nextEl: ".thinkus-button-next",
-        prevEl: ".thinkus-button-prev",
+        nextEl: ".gs_stone-button-next",
+        prevEl: ".gs_stone-button-prev",
       },
     });
   }

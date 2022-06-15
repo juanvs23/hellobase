@@ -18,7 +18,7 @@ $is_header_shadow = $header_shadow['header_shadow']?' header-shadow':'';
 <a class="skip-link screen-reader-text" href="#content">
 	<?php _e( 'Skip to content', 'hello-elementor' ); ?></a>
 
-<header id="site-header-top" class="thinkus-site-header top-header" role="banner">
+<header id="site-header-top" class="gs_stone-site-header top-header" role="banner">
     <div class="header-wrapper">
 
 		<div class="site-branding">
@@ -48,7 +48,7 @@ $is_header_shadow = $header_shadow['header_shadow']?' header-shadow':'';
 	?>
 	</div>
 </header>
-<header id="site-header" class="thinkus-site-header header<?php echo $is_header_shadow; ?>" role="banner">
+<header id="site-header" class="gs_stone-site-header header<?php echo $is_header_shadow; ?>" role="banner">
 <div class="header-wrapper">
 	<div class="site-branding">
 		<?php
